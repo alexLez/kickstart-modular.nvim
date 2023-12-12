@@ -26,3 +26,21 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- My maps
+
+vim.keymap.set('i', 'jk', "<Esc>")
+vim.keymap.set('i', 'kj', "<Esc>")
+
+vim.keymap.set('n', '0', "^")
+vim.keymap.set('n', '^', "0")
+
+vim.keymap.set('n', '<leader>w', ":w<CR>")
+vim.keymap.set('n', '<leader>q', ":qa!<CR>")
+vim.keymap.set('n', '<leader>s', ":wq<CR>")
+
+vim.keymap.set('n', '<leader>e', ":NvimTreeToggle<CR>")
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<C-p>', builtin.find_files, {})
+vim.keymap.set('n', '<C-r>', builtin.live_grep, {})
