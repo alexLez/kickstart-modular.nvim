@@ -47,8 +47,5 @@ vim.keymap.set('n', '<C-l>', "<C-w>l")
 vim.keymap.set('n', '<leader>e', ":NvimTreeToggle<CR>")
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<C-r>', builtin.live_grep, {})
-
-
-
+vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+vim.keymap.set('n', '<leader>r', builtin.live_grep, {})
