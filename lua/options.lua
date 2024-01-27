@@ -47,3 +47,5 @@ vim.g.loaded_netrwPlugin = 1
 vim.wo.relativenumber = true
 
 vim.wo.wrap = false
+vim.o.splitright = true
+vim.o.splitbelow = true
