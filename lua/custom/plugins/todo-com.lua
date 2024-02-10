@@ -14,5 +14,8 @@ return {
         max_line_len = 400, -- ignore lines longer than this
         exclude = {}, -- list of file types to exclude highlighting
       },
+      search = {
+         pattern = [=[\b(KEYWORDS) \[.*\]]=]
+      },
   }
 }

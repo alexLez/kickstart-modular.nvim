@@ -72,6 +72,7 @@ local servers = {
   bashls = {},
   -- gopls = {},
   pyright = {},
+  matlab_ls = {},
   -- rust_analyzer = {},
   -- tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },

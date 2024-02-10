@@ -1,4 +1,4 @@
--- [[ Basic Keymaps ]]
+--Upcoming changes: [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
@@ -56,3 +56,19 @@ vim.keymap.set('n', '<leader>e', ":NvimTreeToggle<CR>")
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>r', builtin.live_grep, {})
+
+-- Only copy non empty stuff
+vim.keymap.set("n", "x", '"_x')
+vim.keymap.set("n", "c", '"_c')
+
+vim.keymap.set("n", "dd", function()
+    if vim.fn.getline(".") == "" then
+        return '"_dd'
+    end
+    return "dd"
+    end, { expr = true })
+
+vim.keymap.set("v", "<leader>p", "\"_dP")
+
+vim.keymap.set('n', '<C-u>', "<C-u>zz")
+vim.keymap.set('n', '<C-d>', "<C-d>zz")
