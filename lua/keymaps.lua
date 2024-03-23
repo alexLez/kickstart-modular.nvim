@@ -36,8 +36,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.keymap.set('i', 'jk', "<Esc>")
 vim.keymap.set('i', 'kj', "<Esc>")
 
-vim.keymap.set('n', '0', "^")
-vim.keymap.set('n', '^', "0")
+-- vim.keymap.set('n', '0', "^")
+-- vim.keymap.set('n', '^', "0")
 
 vim.keymap.set('n', '<leader>w', ":w<CR>")
 vim.keymap.set('n', '<leader>q', ":qa!<CR>")
