@@ -89,5 +89,19 @@ return {
     -- Install golang specific config
     require('dap-go').setup()
     require('dap-python').setup('~/.local/share/nvim/mason/packages/debugpy/venv/bin/python')
+
+    dap.configurations.python = {
+      {
+        type = "python",
+        name = "current file",
+        request = "launch",
+        projectDir = "${workspaceFolder}",
+        cwd = "{workspaceFolder}",
+        program = "${file}",
+        exitAfterTaskReturns = false,
+      }
+    }
+
+    require('dap.ext.vscode').load_launchjs(nil, nil)
   end,
 }
