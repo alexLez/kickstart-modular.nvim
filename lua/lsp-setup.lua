@@ -74,8 +74,8 @@ local servers = {
   pyright = {},
   matlab_ls = {},
   -- rust_analyzer = {},
-  -- tsserver = {},
-  -- html = { filetypes = { 'html', 'twig', 'hbs'} },
+  tsserver = {},
+  html = { filetypes = { 'html', 'twig', 'hbs' } },
   jdtls = {},
 
   lua_ls = {
