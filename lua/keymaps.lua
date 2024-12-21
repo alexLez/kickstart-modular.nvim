@@ -48,8 +48,8 @@ vim.keymap.set('n', '<C-j>', "<C-w>j")
 vim.keymap.set('n', '<C-k>', "<C-w>k")
 vim.keymap.set('n', '<C-l>', "<C-w>l")
 
-vim.keymap.set('n', '<leader>vs', ":vs<CR>", {desc = 'Open vertial split'})
-vim.keymap.set('n', '<leader>sp', ":sp<CR>", {desc = 'Open horizontal split'})
+vim.keymap.set('n', '<leader>vs', ":vs<CR>", { desc = 'Open vertial split' })
+vim.keymap.set('n', '<leader>sp', ":sp<CR>", { desc = 'Open horizontal split' })
 
 vim.keymap.set('n', '<leader>e', ":NvimTreeToggle<CR>")
 
@@ -62,13 +62,14 @@ vim.keymap.set("n", "x", '"_x')
 vim.keymap.set("n", "c", '"_c')
 
 vim.keymap.set("n", "dd", function()
-    if vim.fn.getline(".") == "" then
-        return '"_dd'
-    end
-    return "dd"
-    end, { expr = true })
+  if vim.fn.getline(".") == "" then
+    return '"_dd'
+  end
+  return "dd"
+end, { expr = true })
 
 vim.keymap.set("v", "<leader>p", "\"_dP")
 
 vim.keymap.set('n', '<C-u>', "<C-u>zz")
 vim.keymap.set('n', '<C-d>', "<C-d>zz")
+vim.keymap.set('n', '<leader>db', ":%bd|e#<CR>")
