@@ -40,8 +40,7 @@ vim.keymap.set('i', 'kj', "<Esc>")
 -- vim.keymap.set('n', '^', "0")
 
 vim.keymap.set('n', '<leader>w', ":w<CR>")
-vim.keymap.set('n', '<leader>q', ":qa!<CR>")
-vim.keymap.set('n', '<leader>s', ":wq<CR>")
+-- vim.keymap.set('n', '<leader>q', ":qa!<CR>")
 
 vim.keymap.set('n', '<C-h>', "<C-w>h")
 vim.keymap.set('n', '<C-j>', "<C-w>j")

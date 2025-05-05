@@ -31,7 +31,7 @@ return {
          exclude = {},              -- list of file types to exclude highlighting
       },
       search = {
-         pattern = [=[\b(KEYWORDS) \[.*\]]=]
+         pattern = [=[\b(KEYWORDS)\(.*\)]=]
       },
    }
 }
