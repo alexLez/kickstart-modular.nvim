@@ -49,3 +49,4 @@ vim.wo.relativenumber = true
 vim.wo.wrap = false
 vim.o.splitright = true
 vim.o.splitbelow = true
+vim.o.swapfile = false

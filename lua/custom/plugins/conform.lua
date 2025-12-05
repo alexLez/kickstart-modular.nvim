@@ -3,7 +3,12 @@ return {
     opts = {
         formatters_by_ft = {
             python = { "ruff_organize_imports", "ruff_format" },
+            -- python = { "isort", "black" },
             markdown = { "mdformat" },
+            javascript = { "prettier" },
+            javascriptreact = { "prettier" },
+            typescript = { "prettier" },
+            typescriptreact = { "prettier" },
         },
         format_on_save = {
             lsp_fallback = true,

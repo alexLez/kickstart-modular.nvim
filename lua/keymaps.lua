@@ -55,6 +55,13 @@ vim.keymap.set('n', '<leader>e', ":NvimTreeToggle<CR>")
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>r', builtin.live_grep, {})
+-- vim.keymap.set('n', '<leader>r', function()
+--   builtin.live_grep({
+--     additional_args = function()
+--       return { "--glob", ".gitlab/**" }
+--     end
+--   })
+-- end, {})
 
 -- Only copy non empty stuff
 vim.keymap.set("n", "x", '"_x')
@@ -72,3 +79,9 @@ vim.keymap.set("v", "<leader>p", "\"_dP")
 vim.keymap.set('n', '<C-u>', "<C-u>zz")
 vim.keymap.set('n', '<C-d>', "<C-d>zz")
 vim.keymap.set('n', '<leader>db', ":%bd|e#<CR>")
+
+vim.keymap.set('n', '<leader>yf', function()
+  local curpos = vim.fn.getpos(".") -- save current cursor position
+  vim.cmd('normal! ggVGy')          -- yank entire file
+  vim.fn.setpos('.', curpos)        -- restore cursor position
+end, { desc = 'Yank entire file without moving cursor' })
